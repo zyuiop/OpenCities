@@ -1,0 +1,30 @@
+name: ATCVilles
+main: fr.zgalaxy.ATCVilles.ATCVilles
+version: 1.0
+author: zyuiop
+commands:
+    ville:
+        description: Commande de gestion de ville
+        usage: "Tapez /ville help pour afficher l'aide"
+        permission: ATCVilles.basic
+        permission-message: Permission manquante
+    parcelle:
+        description: Commande de gestion de parcelles
+        usage: "Tapez /parcelle help pour afficher l'aide"
+        permission: ATCVilles.basic
+        permission-message: Permission manquante
+    atcv:
+        description: Commande générale de ATCV
+        usage: "Tapez /atcv help pour afficher l'aide"
+        permission: ATCVilles.basic
+        permission-message: Permission manquante
+permissions:
+    ATCVilles.basic:
+        default: true
+        description: Permission pour tous les membres non visiteurs
+    ATCVilles.load:
+        default: op
+        description: Autorise le /atcload
+    ATCVilles.save:
+        default: op
+        description: Autorise le /atcsave

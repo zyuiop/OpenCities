@@ -1,0 +1,43 @@
+##########################################
+# Config du plugin ATCVilles             #
+##########################################
+
+# Montant nécessaire pour créeer une ville :
+ville-creation: 250
+
+
+# Paliers de villes :
+
+#Exemple 
+#	Bourg: #Nom du pallier
+#		min-hab: #Nb habitants minimum du pallier
+#		max-chunks : #nb max chyunks de la ville
+#		max-tax : #impot max par semaine en PO
+
+villes:
+    Bourg:
+        min-hab: 1
+        max-chunks: 100
+        max-tax: 10
+        chunk-price: 150
+    Village:
+        min-hab: 5
+        max-chunks: 250
+        max-tax: 20
+        chunk-price: 130
+    Ville:
+        min-hab: 15
+        max-chunks: 500
+        max-tax: 30
+        chunk-price: 110
+    Metropole:
+        min-hab: 22
+        max-chunks: 800
+        max-tax: 50
+        chunk-price: 90
+    Capitale:
+        min-hab: 30
+        max-chunks: 1000
+        max-tax: 100
+        chunk-price: 80    
+        

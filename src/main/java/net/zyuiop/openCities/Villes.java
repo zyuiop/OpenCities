@@ -78,7 +78,7 @@ public class Villes {
 		
 		PalierVille p = new PalierVille();
 		for (PalierVille palier : paliers) {
-			if (palier.minHabs > habs && (p.minHabs == 0 || palier.minHabs < p.minHabs)) // Palier plus serré
+			if (palier.minHabs > habs && (p.minHabs <= 0 || palier.minHabs < p.minHabs)) // Palier plus serré
 				p = palier;
 		}
 		return p;

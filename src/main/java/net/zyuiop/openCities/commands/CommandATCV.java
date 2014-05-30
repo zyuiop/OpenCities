@@ -26,7 +26,7 @@ public class CommandATCV implements CommandExecutor {
 		
 		if (args[0].equals("help")) {
 			sender.sendMessage("----------------"+plugin.TAG+"----------------");
-			sender.sendMessage(ChatColor.AQUA+"Aide générale ATCVilles");
+			sender.sendMessage(ChatColor.AQUA+"Aide générale OpenCities");
 			sender.sendMessage("Vous ne pouvez pas placer ou casser sur la map principale.");
 			sender.sendMessage("Commandes de ville : /ville help");
 			sender.sendMessage("Commandes de parcelles : /parcelle help");

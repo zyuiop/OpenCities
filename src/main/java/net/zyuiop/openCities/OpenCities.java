@@ -71,7 +71,7 @@ public class OpenCities extends JavaPlugin {
 	public Players p = null;
 	
 	
-	public String TAG = ChatColor.AQUA+"[???Villes] "+ChatColor.RESET;
+	public String TAG = ChatColor.GREEN+"[OpenCities] "+ChatColor.RESET;
 	
 	public Villes v() {
 		return this.v;

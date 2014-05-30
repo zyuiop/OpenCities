@@ -90,7 +90,6 @@ public class CommandVille implements CommandExecutor {
 					TextUtils.FormatHelp("ville", "settype <private|public>", "Change le type de votre ville")
 				};
 				
-				int linesPerPage = 5;
 				int from = page*5;
 				int to = from+5;
 				int nbPages = (int) Math.ceil(messages.length/5);

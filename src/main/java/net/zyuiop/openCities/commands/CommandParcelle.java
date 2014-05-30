@@ -38,25 +38,56 @@ private OpenCities plugin = null;
 			
 			Player j = (Player) sender;
 			if (args[0].equalsIgnoreCase("help")) {
+				
 				sender.sendMessage(ChatColor.GOLD+"=========["+ChatColor.BLUE+"ATC Villes"+ChatColor.GOLD+"]=========");
 				sender.sendMessage("");
-				sender.sendMessage("--- Commandes pour maires et adjoints ---");
-				sender.sendMessage("- "+TextUtils.FormatHelp("parcelle", "tool", "Donne un objet de gestion de création de parcelles."));
-				sender.sendMessage("- "+TextUtils.FormatHelp("parcelle", "hauteurmax", "Agrandit la zone sélectionnée de la hauteur 0 à la hauteur 255."));
-				sender.sendMessage("- "+TextUtils.FormatHelp("parcelle", "create <nom> <shop|house|hostel> <prix>", "Crée une parcelle sur la zone sélectionnée.(hostel est une parcelle louable au jour IRL)"));
-				sender.sendMessage("- "+TextUtils.FormatHelp("parcelle", "list", "Liste les parcelles de la ville. "));
-				sender.sendMessage("- "+TextUtils.FormatHelp("parcelle", "supprimer <nom>", "Supprime la parcelle <nom>"));
-				sender.sendMessage("- "+TextUtils.FormatHelp("parcelle", "setprix <nom> <prix>", "Change le prix de la parcelle <nom>"));
-				sender.sendMessage("");
-				sender.sendMessage("--- Commandes pour tous ---");
-				sender.sendMessage("- "+TextUtils.FormatHelp("parcelle", "acheter <nom>", "Achète la parcelle <nom> dans la ville "+ChatColor.BOLD+"dans laquelle vous vous trouvez."));
-				sender.sendMessage("- "+TextUtils.FormatHelp("parcelle", "ajouter <parcelle> <pseudo>", "Ajoute le citoyen <pseudo> à la parcelle <parcelle>. La parcelle doit vous appartenir."));
-				sender.sendMessage("- "+TextUtils.FormatHelp("parcelle", "info <nom>", "Affiche les infos de la parcelle <nom> dans votre ville."));
-				sender.sendMessage("- "+TextUtils.FormatHelp("parcelle", "setpermissions <parcelle> <permission> <valeur>", "Commandes de permissions dans une parcelle. (voir /parcelle setpermissions help)"));
-				sender.sendMessage("- "+TextUtils.FormatHelp("parcelle", "revendre <nom> <prix>", "Remet en vente la parcelle <nom> pour <prix> et vous crédite de 90% du prix."));
-				sender.sendMessage("- "+TextUtils.FormatHelp("parcelle", "rent <ville> <parcelle>", "Loue la parcelle <parcelle> de type hostel dans la ville <ville>. Vous paierez tous les jours à minuit IRL le prix journée de la parcelle."));
-				sender.sendMessage("- "+TextUtils.FormatHelp("parcelle", "leave <ville> <parcelle>", "Termine la location de la parcelle <parcelle> dans la ville <ville>"));
+				
+				String[] messages = new String[] {
+				TextUtils.FormatHelp("parcelle", "tool", "Donne un objet de gestion de création de parcelles."),
+				TextUtils.FormatHelp("parcelle", "hauteurmax", "Agrandit la zone sélectionnée de la hauteur 0 à la hauteur 255."),
+				TextUtils.FormatHelp("parcelle", "create <nom> <shop|house|hostel> <prix>", "Crée une parcelle sur la zone sélectionnée.(hostel est une parcelle louable au jour IRL)"),
+				TextUtils.FormatHelp("parcelle", "list", "Liste les parcelles de la ville. "),
+				TextUtils.FormatHelp("parcelle", "supprimer <nom>", "Supprime la parcelle <nom>"),
+				TextUtils.FormatHelp("parcelle", "setprix <nom> <prix>", "Change le prix de la parcelle <nom>"),
+				TextUtils.FormatHelp("parcelle", "acheter <nom>", "Achète la parcelle <nom> dans la ville "+ChatColor.BOLD+"dans laquelle vous vous trouvez."),
+				TextUtils.FormatHelp("parcelle", "ajouter <parcelle> <pseudo>", "Ajoute le citoyen <pseudo> à la parcelle <parcelle>. La parcelle doit vous appartenir."),
+				TextUtils.FormatHelp("parcelle", "info <nom>", "Affiche les infos de la parcelle <nom> dans votre ville."),
+				TextUtils.FormatHelp("parcelle", "setpermissions <parcelle> <permission> <valeur>", "Commandes de permissions dans une parcelle. (voir /parcelle setpermissions help)"),
+				TextUtils.FormatHelp("parcelle", "revendre <nom> <prix>", "Remet en vente la parcelle <nom> pour <prix> et vous crédite de 90% du prix."),
+				//TextUtils.FormatHelp("parcelle", "rent <ville> <parcelle>", "Loue la parcelle <parcelle> de type hostel dans la ville <ville>. Vous paierez tous les jours à minuit IRL le prix journée de la parcelle."),
+				TextUtils.FormatHelp("parcelle", "leave <ville> <parcelle>", "Termine la location de la parcelle <parcelle> dans la ville <ville>")};
 
+				int page = 1;
+				
+				if (args.length > 1) {
+					try {
+						page = Integer.parseInt(args[1]);
+					} catch (NumberFormatException e) {
+						sender.sendMessage(ChatColor.RED+"La page entrée n'est pas un nombre.");
+						return true;
+					}
+					
+				}
+				
+
+				
+				int linesPerPage = 5;
+				int from = page*5;
+				int to = from+5;
+				int nbPages = (int) Math.ceil(messages.length/5);
+				
+				if ((page+1) < 1 || (page+1) > nbPages) {
+					sender.sendMessage("Erreur : la page d'aide demandée n'existe pas.");
+				}
+				
+				
+				int i = from;
+				while (i < to && i< messages.length-1) {
+					i++;
+					sender.sendMessage("- "+messages[i]);
+				}
+				
+				sender.sendMessage("------ Aide : page "+(page+1)+" / "+nbPages+" ------");
 				
 				return true;
 				

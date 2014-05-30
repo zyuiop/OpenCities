@@ -1,4 +1,4 @@
-package fr.zgalaxy.ATCVilles.prompts;
+package net.zyuiop.openCities.prompts;
 
 
 import org.bukkit.Bukkit;

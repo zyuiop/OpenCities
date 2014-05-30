@@ -1,17 +1,17 @@
-package fr.zgalaxy.ATCVilles.commands;
+package net.zyuiop.openCities.commands;
+
+import net.zyuiop.openCities.OpenCities;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 
-import fr.zgalaxy.ATCVilles.ATCVilles;
-
 public class CommandATCV implements CommandExecutor {
 
-	private ATCVilles plugin = null;
+	private OpenCities plugin = null;
 	
-	public CommandATCV(ATCVilles pl) {
+	public CommandATCV(OpenCities pl) {
 		plugin = pl;
 	}
 	

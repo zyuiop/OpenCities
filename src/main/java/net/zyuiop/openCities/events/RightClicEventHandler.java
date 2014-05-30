@@ -1,4 +1,7 @@
-package fr.zgalaxy.ATCVilles.events;
+package net.zyuiop.openCities.events;
+
+import net.zyuiop.openCities.OpenCities;
+import net.zyuiop.openCities.data.Ville;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -17,15 +20,12 @@ import org.bukkit.event.player.PlayerInteractEntityEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.Inventory;
 
-import fr.zgalaxy.ATCVilles.ATCVilles;
-import fr.zgalaxy.ATCVilles.data.Ville;
-
 public class RightClicEventHandler implements Listener {
 	
 	
-	private ATCVilles pl = null;
+	private OpenCities pl = null;
 	
-	public RightClicEventHandler(ATCVilles pl) {
+	public RightClicEventHandler(OpenCities pl) {
 		this.pl = pl;
 	}
 	

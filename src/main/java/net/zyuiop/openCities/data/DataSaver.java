@@ -1,4 +1,4 @@
-package fr.zgalaxy.ATCVilles.data;
+package net.zyuiop.openCities.data;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -10,18 +10,18 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Vector;
 
+import net.zyuiop.openCities.OpenCities;
+import net.zyuiop.openCities.data.Ville;
+import net.zyuiop.openCities.utils.FileUtils;
+
 import org.apache.commons.lang.StringUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.Chunk;
 import org.bukkit.Location;
 
-import fr.zgalaxy.ATCVilles.ATCVilles;
-import fr.zgalaxy.ATCVilles.data.Ville;
-import fr.zgalaxy.ATCVilles.utils.FileUtils;
-
 public class DataSaver extends Data {
 
-	public DataSaver(ATCVilles plugin) {
+	public DataSaver(OpenCities plugin) {
 		super(plugin);
 	}
 	

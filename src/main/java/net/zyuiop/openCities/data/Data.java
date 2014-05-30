@@ -1,19 +1,19 @@
-package fr.zgalaxy.ATCVilles.data;
+package net.zyuiop.openCities.data;
 
 import java.io.File;
 
-import org.bukkit.Bukkit;
+import net.zyuiop.openCities.OpenCities;
+import net.zyuiop.openCities.utils.FileUtils;
 
-import fr.zgalaxy.ATCVilles.ATCVilles;
-import fr.zgalaxy.ATCVilles.utils.FileUtils;
+import org.bukkit.Bukkit;
 
 public abstract class Data {
 	
-	protected ATCVilles pl = null;
+	protected OpenCities pl = null;
 	protected String rootDir = null;
 	protected final String nl = System.getProperty("line.separator");
 	
-	public Data(ATCVilles plugin) {
+	public Data(OpenCities plugin) {
 		pl = plugin;
 		
 		String dat =  pl.getDataFolder().toPath().toAbsolutePath().toString();

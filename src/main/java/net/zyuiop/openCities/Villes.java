@@ -1,8 +1,11 @@
-package fr.zgalaxy.ATCVilles;
+package net.zyuiop.openCities;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Set;
+
+import net.zyuiop.openCities.data.Parcelle;
+import net.zyuiop.openCities.data.Ville;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Chunk;
@@ -13,15 +16,12 @@ import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 
-import fr.zgalaxy.ATCVilles.data.Parcelle;
-import fr.zgalaxy.ATCVilles.data.Ville;
-
 public class Villes {
 	protected HashMap<String, Ville> listeVilles;
-	protected ATCVilles plugin;
+	protected OpenCities plugin;
 	protected ArrayList<PalierVille> paliers;
 	
-	public Villes(ATCVilles pl) {
+	public Villes(OpenCities pl) {
 		pl.getLogger().info("Load");
 		listeVilles = pl.getReader().getVilles();
 		plugin = pl;
@@ -190,7 +190,7 @@ public class Villes {
 		Chunk c = l.getChunk();
 		Ville v = villeParChunk(c);
 		
-		if (p.hasPermission(ATCVilles.BypassPerm))
+		if (p.hasPermission(OpenCities.BypassPerm))
 			return true;
 		
 		if (v == null)
@@ -231,7 +231,7 @@ public class Villes {
 		
 		
 		
-		if (p.hasPermission(ATCVilles.BypassPerm))
+		if (p.hasPermission(OpenCities.BypassPerm))
 			return true;
 		
 		if (v == null)
@@ -271,7 +271,7 @@ public class Villes {
 		Chunk c = e.getLocation().getChunk();
 		Ville v = villeParChunk(c);
 		
-		if (p.hasPermission(ATCVilles.BypassPerm))
+		if (p.hasPermission(OpenCities.BypassPerm))
 			return true;
 		
 		if (v == null)

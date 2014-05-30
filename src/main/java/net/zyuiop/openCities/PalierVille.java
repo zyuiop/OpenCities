@@ -1,4 +1,4 @@
-package fr.zgalaxy.ATCVilles;
+package net.zyuiop.openCities;
 
 public class PalierVille {
 	public int maxChunks = 0;

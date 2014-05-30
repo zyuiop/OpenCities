@@ -1,4 +1,8 @@
-package fr.zgalaxy.ATCVilles.events;
+package net.zyuiop.openCities.events;
+
+import net.zyuiop.openCities.OpenCities;
+import net.zyuiop.openCities.data.Parcelle;
+import net.zyuiop.openCities.data.Ville;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
@@ -7,15 +11,11 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerMoveEvent;
 
-import fr.zgalaxy.ATCVilles.ATCVilles;
-import fr.zgalaxy.ATCVilles.data.Parcelle;
-import fr.zgalaxy.ATCVilles.data.Ville;
-
 public class MoveEventHandler implements Listener {
 	
-	private ATCVilles pl = null;
+	private OpenCities pl = null;
 	
-	public MoveEventHandler(ATCVilles pl) {
+	public MoveEventHandler(OpenCities pl) {
 		this.pl = pl;
 	}
 	

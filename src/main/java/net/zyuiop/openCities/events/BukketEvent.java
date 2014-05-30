@@ -1,4 +1,6 @@
-package fr.zgalaxy.ATCVilles.events;
+package net.zyuiop.openCities.events;
+
+import net.zyuiop.openCities.OpenCities;
 
 import org.bukkit.ChatColor;
 import org.bukkit.event.EventHandler;
@@ -7,19 +9,17 @@ import org.bukkit.event.player.PlayerBucketEmptyEvent;
 import org.bukkit.event.player.PlayerBucketEvent;
 import org.bukkit.event.player.PlayerBucketFillEvent;
 
-import fr.zgalaxy.ATCVilles.ATCVilles;
-
 public class BukketEvent implements Listener {
 	
-	private ATCVilles pl = null;
+	private OpenCities pl = null;
 	
-	public BukketEvent(ATCVilles pl) {
+	public BukketEvent(OpenCities pl) {
 		this.pl = pl;
 	}
 	
 	@EventHandler
 	public void onBukket(PlayerBucketFillEvent e) {
-		if (!e.getBlockClicked().getWorld().getName().equals("world") || e.getPlayer().hasPermission(ATCVilles.BypassPerm))
+		if (!e.getBlockClicked().getWorld().getName().equals("world") || e.getPlayer().hasPermission(OpenCities.BypassPerm))
 			return;
 		
 		// Get chunk.
@@ -32,7 +32,7 @@ public class BukketEvent implements Listener {
 	
 	@EventHandler
 	public void onBukket(PlayerBucketEmptyEvent e) {
-		if (!e.getBlockClicked().getWorld().getName().equals("world") || e.getPlayer().hasPermission(ATCVilles.BypassPerm))
+		if (!e.getBlockClicked().getWorld().getName().equals("world") || e.getPlayer().hasPermission(OpenCities.BypassPerm))
 			return;
 		
 		// Get chunk.

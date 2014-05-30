@@ -1,4 +1,4 @@
-package fr.zgalaxy.ATCVilles.commands;
+package net.zyuiop.openCities.commands;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -9,6 +9,15 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 import java.util.Vector;
+
+import net.zyuiop.openCities.OpenCities;
+import net.zyuiop.openCities.PalierVille;
+import net.zyuiop.openCities.Villes;
+import net.zyuiop.openCities.data.DataSaver;
+import net.zyuiop.openCities.data.Parcelle;
+import net.zyuiop.openCities.data.Ville;
+import net.zyuiop.openCities.prompts.CityNamePrompt;
+import net.zyuiop.openCities.utils.TextUtils;
 
 import org.apache.commons.lang.StringUtils;
 import org.bukkit.Bukkit;
@@ -28,21 +37,12 @@ import org.bukkit.conversations.ConversationPrefix;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
 
-import fr.zgalaxy.ATCVilles.ATCVilles;
-import fr.zgalaxy.ATCVilles.PalierVille;
-import fr.zgalaxy.ATCVilles.Villes;
-import fr.zgalaxy.ATCVilles.data.DataSaver;
-import fr.zgalaxy.ATCVilles.data.Parcelle;
-import fr.zgalaxy.ATCVilles.data.Ville;
-import fr.zgalaxy.ATCVilles.prompts.CityNamePrompt;
-import fr.zgalaxy.ATCVilles.utils.TextUtils;
-
 public class CommandVille implements CommandExecutor {
 
-	private ATCVilles plugin = null;
+	private OpenCities plugin = null;
 	private double createCity = 0;
 	
-	public CommandVille(ATCVilles pl) {
+	public CommandVille(OpenCities pl) {
 		plugin = pl;
 		createCity = pl.getConfig().getDouble("ville-creation");
 		pl.getLogger().info("---> Argent pour créer une ville : "+createCity);

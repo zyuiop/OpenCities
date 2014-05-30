@@ -1,16 +1,16 @@
-package fr.zgalaxy.ATCVilles.commands;
+package net.zyuiop.openCities.commands;
+
+import net.zyuiop.openCities.OpenCities;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 
-import fr.zgalaxy.ATCVilles.ATCVilles;
-
 public class CommandSave implements CommandExecutor {
 
-	private ATCVilles plugin = null;
+	private OpenCities plugin = null;
 	
-	public CommandSave(ATCVilles pl) {
+	public CommandSave(OpenCities pl) {
 		plugin = pl;
 	}
 

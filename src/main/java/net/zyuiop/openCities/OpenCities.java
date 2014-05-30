@@ -1,4 +1,4 @@
-package fr.zgalaxy.ATCVilles;
+package net.zyuiop.openCities;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -9,18 +9,18 @@ import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.util.permissions.DefaultPermissions;
 
 import net.milkbowl.vault.economy.Economy;
-import fr.zgalaxy.ATCVilles.commands.CommandATCV;
-import fr.zgalaxy.ATCVilles.commands.CommandParcelle;
-import fr.zgalaxy.ATCVilles.commands.CommandVille;
-import fr.zgalaxy.ATCVilles.data.*;
-import fr.zgalaxy.ATCVilles.events.BreakPlaceEvents;
-import fr.zgalaxy.ATCVilles.events.BukketEvent;
-import fr.zgalaxy.ATCVilles.events.JoinEventHandler;
-import fr.zgalaxy.ATCVilles.events.MoveEventHandler;
-import fr.zgalaxy.ATCVilles.events.RightClicEventHandler;
-import fr.zgalaxy.ATCVilles.events.UseItemEvent;
+import net.zyuiop.openCities.commands.CommandATCV;
+import net.zyuiop.openCities.commands.CommandParcelle;
+import net.zyuiop.openCities.commands.CommandVille;
+import net.zyuiop.openCities.data.*;
+import net.zyuiop.openCities.events.BreakPlaceEvents;
+import net.zyuiop.openCities.events.BukketEvent;
+import net.zyuiop.openCities.events.JoinEventHandler;
+import net.zyuiop.openCities.events.MoveEventHandler;
+import net.zyuiop.openCities.events.RightClicEventHandler;
+import net.zyuiop.openCities.events.UseItemEvent;
 
-public class ATCVilles extends JavaPlugin {
+public class OpenCities extends JavaPlugin {
 	@Override
 	public void onEnable() {
 		v = new Villes(this);
@@ -77,7 +77,7 @@ public class ATCVilles extends JavaPlugin {
 		return this.v;
 	}
 	
-	public static ATCVilles instance = null;
+	public static OpenCities instance = null;
 	
 	public void onDisable() {
 		getSaver().saveListeVilles(v.getVilles());

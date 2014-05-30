@@ -1,4 +1,8 @@
-package fr.zgalaxy.ATCVilles.events;
+package net.zyuiop.openCities.events;
+
+import net.zyuiop.openCities.OpenCities;
+import net.zyuiop.openCities.data.Parcelle;
+import net.zyuiop.openCities.data.Ville;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Chunk;
@@ -11,14 +15,10 @@ import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.event.player.PlayerBucketEvent;
 
-import fr.zgalaxy.ATCVilles.ATCVilles;
-import fr.zgalaxy.ATCVilles.data.Parcelle;
-import fr.zgalaxy.ATCVilles.data.Ville;
-
 public class BreakPlaceEvents implements Listener {
-private ATCVilles pl = null;
+private OpenCities pl = null;
 	
-	public BreakPlaceEvents(ATCVilles pl) {
+	public BreakPlaceEvents(OpenCities pl) {
 		this.pl = pl;
 	}
 	
@@ -55,7 +55,7 @@ private ATCVilles pl = null;
 	
 	@EventHandler
 	public void onPlace(BlockPlaceEvent e) {
-		if (!e.getBlock().getWorld().getName().equals("world") || e.getPlayer().hasPermission(ATCVilles.BypassPerm))
+		if (!e.getBlock().getWorld().getName().equals("world") || e.getPlayer().hasPermission(OpenCities.BypassPerm))
 			return;
 		
 		// Get chunk.

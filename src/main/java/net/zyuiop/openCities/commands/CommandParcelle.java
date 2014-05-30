@@ -1,8 +1,14 @@
-package fr.zgalaxy.ATCVilles.commands;
+package net.zyuiop.openCities.commands;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+
+import net.zyuiop.openCities.OpenCities;
+import net.zyuiop.openCities.data.DataSaver;
+import net.zyuiop.openCities.data.Parcelle;
+import net.zyuiop.openCities.data.Ville;
+import net.zyuiop.openCities.utils.TextUtils;
 
 import org.apache.commons.lang.StringUtils;
 import org.bukkit.Bukkit;
@@ -16,16 +22,10 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
-import fr.zgalaxy.ATCVilles.ATCVilles;
-import fr.zgalaxy.ATCVilles.data.DataSaver;
-import fr.zgalaxy.ATCVilles.data.Parcelle;
-import fr.zgalaxy.ATCVilles.data.Ville;
-import fr.zgalaxy.ATCVilles.utils.TextUtils;
-
 public class CommandParcelle implements CommandExecutor {
-private ATCVilles plugin = null;
+private OpenCities plugin = null;
 	
-	public CommandParcelle(ATCVilles pl) {
+	public CommandParcelle(OpenCities pl) {
 		plugin = pl;
 	}
 	

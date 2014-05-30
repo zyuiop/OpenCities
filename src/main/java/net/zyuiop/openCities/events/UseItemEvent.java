@@ -1,4 +1,6 @@
-package fr.zgalaxy.ATCVilles.events;
+package net.zyuiop.openCities.events;
+
+import net.zyuiop.openCities.OpenCities;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -9,13 +11,11 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.player.PlayerShearEntityEvent;
 
-import fr.zgalaxy.ATCVilles.ATCVilles;
-
 public class UseItemEvent implements Listener {
 	
-	private ATCVilles pl = null;
+	private OpenCities pl = null;
 	
-	public UseItemEvent(ATCVilles pl) {
+	public UseItemEvent(OpenCities pl) {
 		this.pl = pl;
 	}
 	
@@ -23,7 +23,7 @@ public class UseItemEvent implements Listener {
 	public void shear(PlayerShearEntityEvent e) {
 		Block b = Bukkit.getServer().getWorld("world").getBlockAt(e.getEntity().getLocation());
 		
-		if (!b.getWorld().getName().equals("world") || e.getPlayer().hasPermission(ATCVilles.BypassPerm))
+		if (!b.getWorld().getName().equals("world") || e.getPlayer().hasPermission(OpenCities.BypassPerm))
 			return;
 		
 		
@@ -48,7 +48,7 @@ public class UseItemEvent implements Listener {
 		else
 			return;
 		
-		if (!b.getWorld().getName().equals("world") || p.hasPermission(ATCVilles.BypassPerm))
+		if (!b.getWorld().getName().equals("world") || p.hasPermission(OpenCities.BypassPerm))
 			return;
 		
 		// Get chunk.

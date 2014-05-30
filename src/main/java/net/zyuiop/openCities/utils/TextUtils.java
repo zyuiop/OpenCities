@@ -1,4 +1,4 @@
-package fr.zgalaxy.ATCVilles.utils;
+package net.zyuiop.openCities.utils;
 
 import org.bukkit.ChatColor;
 

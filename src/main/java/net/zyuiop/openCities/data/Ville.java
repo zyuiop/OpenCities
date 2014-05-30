@@ -1,4 +1,4 @@
-package fr.zgalaxy.ATCVilles.data;
+package net.zyuiop.openCities.data;
 
 import java.util.ArrayList;
 import java.util.HashMap;

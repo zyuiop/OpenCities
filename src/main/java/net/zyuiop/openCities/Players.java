@@ -1,4 +1,4 @@
-package fr.zgalaxy.ATCVilles;
+package net.zyuiop.openCities;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -7,9 +7,9 @@ import org.bukkit.Location;
 
 public class Players {
 	
-	private ATCVilles pl = null;
+	private OpenCities pl = null;
 	
-	public Players(ATCVilles pl) {
+	public Players(OpenCities pl) {
 		this.pl = pl;
 		points = new ArrayList<HashMap<String, Location>>();
 		points.add(new HashMap<String, Location>());

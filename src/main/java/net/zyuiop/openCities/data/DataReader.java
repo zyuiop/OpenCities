@@ -1,4 +1,4 @@
-package fr.zgalaxy.ATCVilles.data;
+package net.zyuiop.openCities.data;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -8,16 +8,16 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Vector;
 
+import net.zyuiop.openCities.OpenCities;
+import net.zyuiop.openCities.data.Ville;
+
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
-
-import fr.zgalaxy.ATCVilles.ATCVilles;
-import fr.zgalaxy.ATCVilles.data.Ville;
 
 public class DataReader extends Data {
 	
 
-	public DataReader(ATCVilles pl) {
+	public DataReader(OpenCities pl) {
 		super(pl);
 	}
 	

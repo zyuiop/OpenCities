@@ -1,5 +1,5 @@
-name: ATCVilles
-main: fr.zgalaxy.ATCVilles.ATCVilles
+name: OpenCities
+main: net.zyuiop.openCities.OpenCities
 version: 1.0
 author: zyuiop
 commands:

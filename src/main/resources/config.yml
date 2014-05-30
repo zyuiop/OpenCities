@@ -26,17 +26,17 @@ villes:
         max-tax: 20
         chunk-price: 130
     Ville:
-        min-hab: 15
+        min-hab: 10
         max-chunks: 500
         max-tax: 30
         chunk-price: 110
     Metropole:
-        min-hab: 22
+        min-hab: 17
         max-chunks: 800
         max-tax: 50
         chunk-price: 90
     Capitale:
-        min-hab: 30
+        min-hab: 25
         max-chunks: 1000
         max-tax: 100
         chunk-price: 80    

@@ -1,6 +1,10 @@
-package fr.zgalaxy.ATCVilles.events;
+package net.zyuiop.openCities.events;
 
 import java.util.ArrayList;
+
+import net.zyuiop.openCities.OpenCities;
+import net.zyuiop.openCities.Villes;
+import net.zyuiop.openCities.data.Ville;
 
 import org.apache.commons.lang.StringUtils;
 import org.bukkit.ChatColor;
@@ -10,14 +14,10 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerMoveEvent;
 
-import fr.zgalaxy.ATCVilles.ATCVilles;
-import fr.zgalaxy.ATCVilles.Villes;
-import fr.zgalaxy.ATCVilles.data.Ville;
-
 public class JoinEventHandler implements Listener {
-	private ATCVilles pl = null;
+	private OpenCities pl = null;
 	
-	public JoinEventHandler(ATCVilles pl) {
+	public JoinEventHandler(OpenCities pl) {
 		this.pl = pl;
 	}
 	

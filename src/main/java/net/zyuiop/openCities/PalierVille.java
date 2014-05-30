@@ -5,9 +5,9 @@ public class PalierVille {
 	
 	public int maxTax = 0;
 	
-	public int minHabs = 0;
+	public int minHabs = -5;
 	
-	public String nom = "";
+	public String nom = "Error";
 	
 	public int chunkPrice = 0;
 }

@@ -57,11 +57,11 @@ private OpenCities plugin = null;
 				//TextUtils.FormatHelp("parcelle", "rent <ville> <parcelle>", "Loue la parcelle <parcelle> de type hostel dans la ville <ville>. Vous paierez tous les jours à minuit IRL le prix journée de la parcelle."),
 				TextUtils.FormatHelp("parcelle", "leave <ville> <parcelle>", "Termine la location de la parcelle <parcelle> dans la ville <ville>")};
 
-				int page = 1;
+				int page = 0;
 				
 				if (args.length > 1) {
 					try {
-						page = Integer.parseInt(args[1]);
+						page = Integer.parseInt(args[1])-1;
 					} catch (NumberFormatException e) {
 						sender.sendMessage(ChatColor.RED+"La page entrée n'est pas un nombre.");
 						return true;
